@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="input_container">
+    <input type="text" id="acc" placeholder=" ">
+    <label for="acc">Account</label>
+  </div>
+  <div class="input_container">
+    <input type="password" id="psw" placeholder=" ">
+    <label for="psw">Password</label>
+  </div>
+  <style>
+    .input_container {
+      display: flex;
+      place-items: center;
+      position: relative;
+      --color: #114514;
+      --color-focus: #191981;
+      margin-bottom: 16px;
+    }
+    .input_container > input {
+      border: 0;
+      outline: 0;
+      border: 0.1rem solid var(--color);
+      padding: 0.5rem;
+      border-radius: 6px;
+    }
+    .input_container > label { 
+      position: absolute;
+      top: 50%;
+      left: 0.7rem;
+      transform: translateY(-55%);
+      color: var(--color);
+      transition: 0.2s;
+      background: white;
+    }
+    .input_container > input:focus,
+    .input_container > input:not(:placeholder-shown) {
+      border: 0.1rem solid var(--color-focus); 
+    }
+    .input_container > input:focus + label,
+    .input_container > input:not(:placeholder-shown) +label {
+      color: var(--color-focus);
+      top: 0;
+      font-size: .8rem;
+    }
+  </style>
+</body>
+</html>

@@ -1,0 +1,3 @@
+js方法签名
+原型
+interface

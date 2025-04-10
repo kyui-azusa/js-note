@@ -1,0 +1,18 @@
+<input id="input_1">账号</input>
+<input id="input_2" type="password">密码</input>
+
+<button onclick='show()'>确认</button>
+
+<script>
+  function show(){
+    let acc = document.getElementById('input_1').value 
+    let psw = document.getElementById('input_2').value 
+    // console.log(input) 
+    if ( acc && psw ){
+      alert(`账号: ${acc} \n密码: ${psw}`) 
+    } else {
+      alert('账号或密码未输入!')
+    }
+
+  }
+</script>
